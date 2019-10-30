@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		942E49771DD11AD784269B8A /* Pods_OCR_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AD2337332842F62C9F2891 /* Pods_OCR_Test.framework */; };
 		F816E0A82361A08100106355 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F816E0A72361A08100106355 /* AppDelegate.swift */; };
 		F816E0AA2361A08100106355 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F816E0A92361A08100106355 /* SceneDelegate.swift */; };
 		F816E0AC2361A08100106355 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F816E0AB2361A08100106355 /* ViewController.swift */; };
@@ -14,9 +15,14 @@
 		F816E0B22361A08100106355 /* OCR_Test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F816E0B02361A08100106355 /* OCR_Test.xcdatamodeld */; };
 		F816E0B42361A08200106355 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F816E0B32361A08200106355 /* Assets.xcassets */; };
 		F816E0B72361A08200106355 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F816E0B52361A08200106355 /* LaunchScreen.storyboard */; };
+		F816E0C023622D0000106355 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F816E0BE23622D0000106355 /* ScanViewController.swift */; };
+		F816E0C123622D0000106355 /* ScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F816E0BF23622D0000106355 /* ScanViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9AEA5FC118E2B32A3F3BB5A0 /* Pods-OCR Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCR Test.debug.xcconfig"; path = "Target Support Files/Pods-OCR Test/Pods-OCR Test.debug.xcconfig"; sourceTree = "<group>"; };
+		B1AD2337332842F62C9F2891 /* Pods_OCR_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCR_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFE22CE50F59C51E68ECC3A3 /* Pods-OCR Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCR Test.release.xcconfig"; path = "Target Support Files/Pods-OCR Test/Pods-OCR Test.release.xcconfig"; sourceTree = "<group>"; };
 		F816E0A42361A08100106355 /* OCR Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OCR Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F816E0A72361A08100106355 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F816E0A92361A08100106355 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +32,8 @@
 		F816E0B32361A08200106355 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F816E0B62361A08200106355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F816E0B82361A08200106355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F816E0BE23622D0000106355 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		F816E0BF23622D0000106355 /* ScanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				942E49771DD11AD784269B8A /* Pods_OCR_Test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10CACB13BE775D4187090515 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9AEA5FC118E2B32A3F3BB5A0 /* Pods-OCR Test.debug.xcconfig */,
+				CFE22CE50F59C51E68ECC3A3 /* Pods-OCR Test.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		576D0C86F324C2C9A2887128 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1AD2337332842F62C9F2891 /* Pods_OCR_Test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F816E09B2361A08100106355 = {
 			isa = PBXGroup;
 			children = (
 				F816E0A62361A08100106355 /* OCR Test */,
 				F816E0A52361A08100106355 /* Products */,
+				10CACB13BE775D4187090515 /* Pods */,
+				576D0C86F324C2C9A2887128 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +94,8 @@
 				F816E0B52361A08200106355 /* LaunchScreen.storyboard */,
 				F816E0B82361A08200106355 /* Info.plist */,
 				F816E0B02361A08100106355 /* OCR_Test.xcdatamodeld */,
+				F816E0BE23622D0000106355 /* ScanViewController.swift */,
+				F816E0BF23622D0000106355 /* ScanViewController.xib */,
 			);
 			path = "OCR Test";
 			sourceTree = "<group>";
@@ -77,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F816E0BB2361A08200106355 /* Build configuration list for PBXNativeTarget "OCR Test" */;
 			buildPhases = (
+				745718BF1DBCC5B42A40827D /* [CP] Check Pods Manifest.lock */,
 				F816E0A02361A08100106355 /* Sources */,
 				F816E0A12361A08100106355 /* Frameworks */,
 				F816E0A22361A08100106355 /* Resources */,
+				43C4AD4380C7D97DB477FA76 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,10 +163,53 @@
 				F816E0B72361A08200106355 /* LaunchScreen.storyboard in Resources */,
 				F816E0B42361A08200106355 /* Assets.xcassets in Resources */,
 				F816E0AF2361A08100106355 /* Main.storyboard in Resources */,
+				F816E0C123622D0000106355 /* ScanViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43C4AD4380C7D97DB477FA76 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OCR Test/Pods-OCR Test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OCR Test/Pods-OCR Test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OCR Test/Pods-OCR Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		745718BF1DBCC5B42A40827D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OCR Test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F816E0A02361A08100106355 /* Sources */ = {
@@ -143,6 +218,7 @@
 			files = (
 				F816E0B22361A08100106355 /* OCR_Test.xcdatamodeld in Sources */,
 				F816E0AC2361A08100106355 /* ViewController.swift in Sources */,
+				F816E0C023622D0000106355 /* ScanViewController.swift in Sources */,
 				F816E0A82361A08100106355 /* AppDelegate.swift in Sources */,
 				F816E0AA2361A08100106355 /* SceneDelegate.swift in Sources */,
 			);
@@ -286,6 +362,7 @@
 		};
 		F816E0BC2361A08200106355 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AEA5FC118E2B32A3F3BB5A0 /* Pods-OCR Test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +381,7 @@
 		};
 		F816E0BD2361A08200106355 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFE22CE50F59C51E68ECC3A3 /* Pods-OCR Test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

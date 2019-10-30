@@ -7,14 +7,51 @@
 //
 
 import UIKit
+import WebKit
+import PayCardsRecognizer
 
-class ViewController: UIViewController {
+protocol isAbleToReceiveData {
+  func pass(data: PayCardsRecognizerResult?)
+}
 
+class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, UIScrollViewDelegate, WKScriptMessageHandler, isAbleToReceiveData {
+    
+    func pass(data: PayCardsRecognizerResult?) {
+        let alert = UIAlertController(title: "Card Holder", message: data?.recognizedHolderName, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        self.webCallback = message.body as! String
+        if webCallback == "Open Camera"{
+            let detailVC = ScanViewController()
+            detailVC.delegate = self
+            self.navigationController?.modalPresentationStyle = .automatic
+            present(detailVC, animated: true)
+        }
+    }
+    
+    var webView = WKWebView()
+    var webCallback = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let config = WKWebViewConfiguration()
+        let userContentController = WKUserContentController()
+        userContentController.add(self, name: "cameraDetect")
+        config.userContentController = userContentController
+
+        webView = WKWebView(frame: view.bounds, configuration: config)
+        webView.navigationDelegate = self
+        
+        let url = URL(string: "http://192.168.1.41:8080/")!
+        let urlRequest = URLRequest(url: url)
+        webView.load(urlRequest)
+        webView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+        
+        view.addSubview(webView)
     }
-
-
+    
 }
 
